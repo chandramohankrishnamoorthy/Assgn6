@@ -182,21 +182,16 @@ for item in items:
 
 time.sleep(1)
 
-items = table_service.query_entities('itemstable', filter="PartitionKey eq 'cardealership'", select='make,model,color,year,price')
+items = table_service.query_entities('itemstable', filter="PartitionKey eq 'cardealership'", select='make,price')
 for item in items:
     print('Name: ' + item.make)
-	print('Model: ' + item.model)
-	print('Color: ' + item.color)
-	print('Year: ' + item.year)
-    print('Price: ' + str(item.price) + '\n')
+	print('Price: ' + str(item.price) + '\n')
 
 time.sleep(1)
 
-items = table_service.query_entities('itemstable', filter="PartitionKey eq 'coffeeshop'", select='brand,flavor,sizeofcup,price')
+items = table_service.query_entities('itemstable', filter="PartitionKey eq 'coffeeshop'", select='brand,price')
 for item in items:
     print('Brand: ' + item.brand)
-	print('Flavor: ' + item.flavor)
-	print('Size of Cup: ' + item.sizeofcup)
 	print('Price per cup: ' + str(item.price) + '\n')
 
 time.sleep(1)
