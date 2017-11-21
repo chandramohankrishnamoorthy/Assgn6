@@ -180,21 +180,17 @@ for item in items:
     print('Name: ' + item.item)
     print('Price: ' + str(item.price) + '\n')
 	
-	time.sleep(1)
-
 items = table_service.query_entities('itemstable', filter="PartitionKey eq 'cardealership'", select='make,price')
 for item in items:
     print('Name: ' + item.make)
     print('Price: ' + str(item.price) + '\n')
-
-	time.sleep(1)
 
 items = table_service.query_entities('itemstable', filter="PartitionKey eq 'coffeeshop'", select='brand,price')
 for item in items:
     print('Brand: ' + item.brand)
 	print('Price per cup: ' + str(item.price) + '\n')
 	
-	time.sleep(1)
+
 
 ###
 # This was a quick demo to see Tables in action.
