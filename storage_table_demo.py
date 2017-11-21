@@ -118,13 +118,13 @@ time.sleep(1)
 cardealer = Entity()
 cardealer.PartitionKey = 'cardealership'
 cardealer.RowKey = '007'
-cardealer.make = 'BMW'
-cardealer.model = '535i'
+cardealer.make = 'Toyota'
+cardealer.model = 'Camry'
 cardealer.year = 2017
 cardealer.color = 'Blue'
-cardealer.price = 75000.00
+cardealer.price = 23000.00
 table_service.insert_entity('itemstable', cardealer)
-print('Created entry for BMW...\n')
+print('Created entry for Toyota Camry...\n')
 time.sleep(1)
 
 cardealer = Entity()
@@ -136,7 +136,7 @@ cardealer.year = 2017
 cardealer.color = 'Silver'
 cardealer.price = 20000.00
 table_service.insert_entity('itemstable', cardealer)
-print('Created entry for Honda...\n')
+print('Created entry for Honda Civic...\n')
 time.sleep(1)
 
 
