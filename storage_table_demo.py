@@ -187,8 +187,9 @@ for item in items:
 
 items = table_service.query_entities('itemstable', filter="PartitionKey eq 'coffeeshop'", select='brand,price')
 for item in items:
-    print('Brand: ' + item.brand)
-	print('Price per cup: ' + str(item.price) + '\n')
+    print('Name: ' + item.brand)
+    print('Price: ' + str(item.price) + '\n')
+
 	
 
 
