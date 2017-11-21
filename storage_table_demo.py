@@ -175,24 +175,29 @@ for item in items:
     print('Name: ' + item.description)
     print('Cost: ' + str(item.cost) + '\n')
 
-items = table_service.query_entities('itemstable', filter="PartitionKey eq 'clothingstore'", select='description,price')
+items = table_service.query_entities('itemstable', filter="PartitionKey eq 'clothingstore'", select='item,price')
 for item in items:
-    print('Name: ' + item.description)
+    print('Name: ' + item.item)
     print('Price: ' + str(item.price) + '\n')
 
 time.sleep(1)
 
-items = table_service.query_entities('itemstable', filter="PartitionKey eq 'cardealership'", select='description,price')
+items = table_service.query_entities('itemstable', filter="PartitionKey eq 'cardealership'", select='make,model,color,year,price')
 for item in items:
-    print('Name: ' + item.description)
+    print('Name: ' + item.make)
+	print('Model: ' + item.model)
+	print('Color: ' + item.color)
+	print('Year: ' + item.year)
     print('Price: ' + str(item.price) + '\n')
 
 time.sleep(1)
 
-items = table_service.query_entities('itemstable', filter="PartitionKey eq 'coffeeshop'", select='description,price')
+items = table_service.query_entities('itemstable', filter="PartitionKey eq 'coffeeshop'", select='brand,flavor,sizeofcup,price')
 for item in items:
-    print('Name: ' + item.description)
-    print('Price: ' + str(item.price) + '\n')
+    print('Brand: ' + item.brand)
+	print('Flavor: ' + item.flavor)
+	print('Size of Cup: ' + item.sizeofcup)
+	print('Price per cup: ' + str(item.price) + '\n')
 
 time.sleep(1)
 
